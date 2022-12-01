@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:ital,wght@1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    min-height: 100vh;
+    background: linear-gradient(45deg, #5dfba1, #0088f7);
+}
+
+.section__left {
+    margin: 80px 0 0 40px;
+}
+
+.section__right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    width: 100%;
+}
+
+.nav {
+    padding: 40px;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+li a {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    font-weight: 900;
+    color: #000;
+    text-decoration: none;
+}
+
+li + li {
+    margin-left: 40px;
+}
+
+
+.about h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    font-weight: 500;
+    color: rgb(35, 35, 35);
+    line-height: 1.2em;
+}
+
+.about + .about {
+    margin-top: 40px;
+}
+
+.about__content p + p {
+    margin-top: 12px;
+}
+
+.horizontal-line {
+    position: relative;
+    margin-top: 5px;
+    max-width: 90%;
+    height: 1px;
+    border-style: none;
+    border-width: 1px;
+    border-color: #000;
+    border-radius: 0px;
+    background-color: #000;
+}
+
+.about .about__content {
+    padding: 12px 40px 0 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    letter-spacing: 0.6px;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 190px;
+    /* height: 450px; */
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+
+}
+
+.card:hover {
+    height: 450px;
+
+}
+
+.imgBx {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card:hover .imgBx {
+    width: 250px;
+    height: 250px;
+}
+
+.imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover; /* определяет как содержимое заменяемого элемента <img> заполняет контейнер относительно его высоты и ширины */
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;    
+}
+
+.card .content .details {
+    padding: 60px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(150px);
+}
+
+.card:hover .content .details {
+    transform: translateY(0px);
+}
+
+.card .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+
+.card .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.card .content .details .data {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card .content .details .data h3 {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.card .content .details .data h3 span {
+    padding-left: 5px;
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.card .content .details .actionBtn {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; Устанавливает промежуток между колонками */
+}
+
+.card .content .details .actionBtn button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none; /* Линии границы элемента */
+    font-size: 1em;
+    font-weight: 500;
+    /* background: #0088f7; */
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn_instagram {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    content: url("./img/instagram.png");
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+}
+
+.btn_telegram {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    content: url("./img/telegram.png");
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+}
+
+.btn_whatsApp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    content: url("./img/whatsapp.png");
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+}
+
+.btn_github {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    content: url("./img/github.png");
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+}
+
+.pointer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.pointer__arrow {
+    padding: 10px 0;
+}
+
+.pointer__text {
+    font-family: 'Caveat', cursive;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+div .li::before {
+    content: "·";
+}
+
+div .football::after {
+    content: "⚽";
+}
+
+div .hokkey::after {
+    content: "🏒";
+}
+
+div .boxing::after {
+    content: "🥊";
+}
+
+div .skier::after {
+    content: "⛷️";
+}
+
+div .coding::after {
+    content: "👨‍💻";
+}
